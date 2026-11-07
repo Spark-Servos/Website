@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spark Servos FTC 38190</title>
+<meta name="description" content="Spark Servos, FTC team 38190 — a rookie middle school robotics team from California.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="grid-bg"></div>
+<canvas id="sparks"></canvas>
+
+<header class="nav">
+  <a class="brand" href="index.html"><img src="assets/logo.png" alt="Spark Servos logo">SPARK SERVOS<small>#38190</small></a>
+  <ul class="links">
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">// FTC Team 38190 · California</div>
+        <h1>WE ARE <span>SPARK&nbsp;SERVOS</span></h1>
+        <p><span class="typed" id="typed" data-text="A rookie FIRST Tech Challenge team of seven middle schoolers, building robots one servo at a time."></span></p>
+        <div class="cta">
+          <a class="btn" href="team.html">Meet the Team</a>
+          <a class="btn ghost" href="#number">Why 38190?</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <svg class="ring spin" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#1d3157" stroke-width="1" stroke-dasharray="2 6"/>
+          <circle cx="100" cy="100" r="96" fill="none" stroke="#ff6a00" stroke-width="2" stroke-dasharray="30 570" stroke-linecap="round"/>
+        </svg>
+        <svg class="ring spin rev" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="88" fill="none" stroke="#14305a" stroke-width="1.5" stroke-dasharray="14 8"/>
+          <circle cx="100" cy="100" r="88" fill="none" stroke="#ffa23a" stroke-width="2" stroke-dasharray="18 535" stroke-linecap="round"/>
+        </svg>
+        <img class="logo" src="assets/logo.png" alt="Spark Servos FTC emblem">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">// 01 · who we are</div>
+        <h2>Powered by <em>sparks</em>, steered by <em>servos</em></h2>
+        <p>We are Spark Servos, a brand new team in California competing in FIRST Tech Challenge (FTC). Seven students from 7th and 8th grade design, build and program a robot that has to think for itself in autonomous and then drive fast in the driver-controlled period.</p>
+      </div>
+      <div class="cards">
+        <div class="card reveal">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 4 14h6l-1 8 9-13h-6z"/></svg>
+          <h3>BUILD</h3><p>Metal, motors and gears. We design a robot, test it, break it and make it stronger.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.12s">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+          <h3>CODE</h3><p>Programs that drive the robot on its own and give drivers smooth, precise control.</p>
+        </div>
+        <div class="card reveal" style="transition-delay:.24s">
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 6 1.5 6 5.5"/></svg>
+          <h3>TEAMWORK</h3><p>Seven teammates, one goal: learn fast, help each other and have a blast doing it.</p>
+        </div>
+      </div>
+      <div class="stats reveal">
+        <div class="stat"><b data-count="38190">0</b><span>Team number</span></div>
+        <div class="stat"><b data-count="7">0</b><span>Teammates</span></div>
+        <div class="stat"><b>CA</b><span>Home state</span></div>
+        <div class="stat"><b>ROOKIE</b><span>Season one</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="number">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">// 02 · the number</div>
+        <h2>38190 is <em>built</em>, not given</h2>
+        <p>Our team number breaks down into five prime numbers. Watch our arm pick each part and assemble it.</p>
+      </div>
+      <div class="stage-wrap reveal">
+        <svg id="stage" viewBox="0 0 1000 420" role="img" aria-label="Animated robot arm picking up prime-number tiles and placing them into slots to build 38190"></svg>
+        <div class="stage-bar">
+          <span>STATUS: <b id="status">IDLE</b></span>
+          <span id="product">2 × 3 × 5 × 19 × 67 = <b>38190</b></span>
+          <button id="replay" type="button">REPLAY ↻</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">SPARK SERVOS · FTC #38190 · California · <a href="https://github.com/Spark-Servos">github.com/Spark-Servos</a></div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
