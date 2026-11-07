@@ -90,7 +90,7 @@
   if (teamEl) {
     var members = [
       ['Austin', '7th'], ['Andy', '7th'], ['Ved', '7th'], ['Henry', '8th'],
-      ['Nicholas', '7th'], ['Jake', '7th'], ['Ahaan', '7th']
+      ['Nicholas', '8th'], ['Jake', '8th'], ['Ahaan', '7th']
     ];
     members.forEach(function (m, n) {
       var d = document.createElement('div');

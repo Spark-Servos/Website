@@ -216,7 +216,7 @@ footer a { color: var(--orange); }
 .chips { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
 .chips span { font-family: var(--display); font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; color: var(--white); padding: .5rem 1.1rem; border: 1px solid var(--line); background: var(--panel); clip-path: polygon(10px 0, 100% 0, calc(100% - 10px) 100%, 0 100%); transition: .25s; }
 .chips span:hover { border-color: var(--orange); color: var(--orange); transform: translateY(-3px); }
-.chips span:nth-child(4) { color: var(--orange); }
+.chips span:nth-child(4), .chips span:nth-child(5), .chips span:nth-child(6) { color: var(--orange); }
 #team-teaser .cta { margin-top: 2rem; }
 iframe.sim { display: block; width: 100%; height: min(75vh, 640px); min-height: 380px; border: 0; background: #000; }
 .stage-bar a.open { color: var(--orange); letter-spacing: .1em; }
