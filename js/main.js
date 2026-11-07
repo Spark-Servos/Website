@@ -124,6 +124,14 @@
     else observe('.member', 'in');
   }
 
+  /* ---------- simulator fullscreen ---------- */
+  var simBtn = document.getElementById('simfs'), simWrap = document.getElementById('simwrap');
+  if (simBtn && simWrap) simBtn.addEventListener('click', function () {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (simWrap.requestFullscreen) simWrap.requestFullscreen();
+    else window.open(simWrap.querySelector('iframe').src, '_blank');
+  });
+
   /* ---------- pick & place stage ---------- */
   var stage = document.getElementById('stage');
   if (stage) buildStage(stage);

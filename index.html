@@ -16,7 +16,7 @@
 <canvas id="sparks"></canvas>
 
 <header class="nav">
-  <a class="brand" href="index.html"><img src="assets/logo.png" alt="Spark Servos logo">SPARK SERVOS<small>#38190</small></a>
+  <a class="brand" href="index.html"><img src="assets/logo.png" alt="Spark Servos logo"><span>SPARK SERVOS</span><small>#38190</small></a>
   <ul class="links">
     <li><a class="active" href="index.html">Home</a></li>
     <li><a href="team.html">Team</a></li>
@@ -100,17 +100,17 @@
   </section>
 
   <section id="sim">
-    <div class="wrap">
+    <div class="wrap wide">
       <div class="reveal">
         <div class="eyebrow">// 03 · play</div>
         <h2>Try our <em>BIOBUZZ</em> simulator</h2>
         <p>A 3D simulator for the BIOBUZZ season. Drive a robot around the field right here in your browser.</p>
       </div>
-      <div class="stage-wrap reveal">
+      <div class="stage-wrap sim-wrap reveal" id="simwrap">
         <iframe class="sim" src="https://fanaustinca.github.io/biobuzz-sim/" title="BIOBUZZ FTC simulator" loading="lazy" allow="fullscreen; gamepad; autoplay"></iframe>
         <div class="stage-bar">
           <span>SIM: <b>BIOBUZZ</b></span>
-          <a class="open" href="https://fanaustinca.github.io/biobuzz-sim/" target="_blank" rel="noopener">OPEN FULL SCREEN ↗</a>
+          <span><button id="simfs" type="button">FULLSCREEN</button> <a class="open" href="https://fanaustinca.github.io/biobuzz-sim/" target="_blank" rel="noopener">NEW TAB ↗</a></span>
         </div>
       </div>
     </div>
