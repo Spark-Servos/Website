@@ -31,14 +31,14 @@
       <div class="reveal">
         <div class="eyebrow">// the number</div>
         <h2>38190 is <em>built</em>, not given</h2>
-        <p>Our team number breaks down into five prime numbers. Watch our arm pick each part and assemble it.</p>
+        <p>Our team number breaks down into five prime numbers. You run the arm: move your mouse (or drag with a finger) to steer, <b>press and hold</b> to grab a part, release to drop it into a slot. Arrow keys and Space work too. Any order works, because multiplication does not care.</p>
       </div>
       <div class="stage-wrap reveal">
-        <svg id="stage" viewBox="0 0 1000 420" role="img" aria-label="Animated robot arm picking up prime-number tiles and placing them into slots to build 38190"></svg>
+        <svg id="stage" tabindex="0" viewBox="0 0 1000 420" role="img" aria-label="Animated robot arm picking up prime-number tiles and placing them into slots to build 38190"></svg>
         <div class="stage-bar">
           <span>STATUS: <b id="status">IDLE</b></span>
-          <span id="product">2 × 3 × 5 × 19 × 67 = <b>38190</b></span>
-          <button id="replay" type="button">REPLAY ↻</button>
+          <span id="product"></span>
+          <span class="btns"><button id="demo" type="button">AUTO DEMO</button> <button id="reset" type="button">RESET ↻</button></span>
         </div>
       </div>
     </div>

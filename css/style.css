@@ -228,3 +228,9 @@ iframe.sim { display: block; width: 100%; height: max(640px, calc(100vh - 150px)
 .stage-bar a.open { color: var(--orange); letter-spacing: .1em; }
 .stage-bar a.open:hover { text-decoration: underline; }
 .page-head-sec { padding-top: 4rem; }
+
+/* human-controlled arm */
+#stage { touch-action: none; cursor: crosshair; user-select: none; -webkit-user-select: none; }
+#stage:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
+.stage-bar .btns { display: flex; gap: .6rem; }
+.slot rect { transition: fill .15s, stroke .15s; }
