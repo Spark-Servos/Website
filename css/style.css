@@ -151,13 +151,13 @@ h2 em { font-style: normal; color: var(--orange); }
 .team { display: flex; flex-wrap: wrap; justify-content: center; gap: 3.2rem 1.4rem; padding-top: 6rem; }
 .member { position: relative; flex: 0 0 calc((100% - 4.2rem) / 4); }
 .member .claw {
-  position: absolute; left: 50%; top: -90px; width: 46px; margin-left: -23px; z-index: 3; pointer-events: none;
+  position: absolute; left: 50%; top: -84px; width: 46px; margin-left: -23px; z-index: 3; pointer-events: none;
   transform: translateY(-260px); opacity: 0;
 }
 .member .claw .cable { position: absolute; left: 50%; bottom: 100%; width: 2px; height: 600px; margin-left: -1px; background: linear-gradient(var(--line), var(--silver)); }
 .member.in .claw { animation: clawdrop 2.4s cubic-bezier(.5,0,.3,1) forwards; }
 .member .card { opacity: 0; transform: translateY(-120px) rotate(-4deg); text-align: center; padding: 2rem 1rem 1.5rem; }
-.member.in .card { animation: carddrop 1.1s cubic-bezier(.3,1.4,.5,1) .9s forwards; }
+.member.in .card { opacity: 1; transform: none; animation: carddrop 2.4s backwards; }
 @keyframes clawdrop {
   0% { transform: translateY(-260px); opacity: 1; }
   38% { transform: translateY(0); opacity: 1; }
@@ -165,12 +165,20 @@ h2 em { font-style: normal; color: var(--orange); }
   99% { transform: translateY(-260px); opacity: 1; }
   100% { transform: translateY(-260px); opacity: 0; }
 }
-@keyframes carddrop { to { opacity: 1; transform: none; } }
+/* the claw carries the card down, lets go at 38-50%, then retracts empty */
+@keyframes carddrop {
+  0% { opacity: 0; transform: translateY(-274px); }
+  10% { opacity: 0; }
+  30% { opacity: 1; }
+  38% { opacity: 1; transform: translateY(-14px); animation-timing-function: cubic-bezier(.3,1.7,.5,1); }
+  50%, 100% { opacity: 1; transform: translateY(0); }
+}
 .claw .jaw { transform-origin: 50% 0; }
-.member.in .claw .jawL { animation: jawL 2.4s forwards; }
-.member.in .claw .jawR { animation: jawR 2.4s forwards; }
-@keyframes jawL { 0%,30% { transform: rotate(8deg); } 40%,50% { transform: rotate(-26deg); } 70%,100% { transform: rotate(8deg); } }
-@keyframes jawR { 0%,30% { transform: rotate(-8deg); } 40%,50% { transform: rotate(26deg); } 70%,100% { transform: rotate(-8deg); } }
+.member.in .claw .jawL { animation: jawL 2.4s both; }
+.member.in .claw .jawR { animation: jawR 2.4s both; }
+/* closed = gripping, open = released */
+@keyframes jawL { 0%,36% { transform: rotate(-12deg); } 40%,48% { transform: rotate(16deg); } 58%,100% { transform: rotate(-12deg); } }
+@keyframes jawR { 0%,36% { transform: rotate(12deg); } 40%,48% { transform: rotate(-16deg); } 58%,100% { transform: rotate(12deg); } }
 .member.in:hover .card { transform: translateY(-6px); }
 .dial { width: 110px; height: 110px; margin: 0 auto 1rem; position: relative; }
 .dial svg { width: 100%; height: 100%; }
