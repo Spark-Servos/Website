@@ -127,22 +127,16 @@ h2 em { font-style: normal; color: var(--orange); }
 .card h3 { font-size: 1.05rem; letter-spacing: .1em; margin-bottom: .6rem; color: var(--orange); }
 .card .ico { width: 44px; height: 44px; margin-bottom: 1rem; color: var(--orange); }
 
-/* pick & place stage */
 .stage-wrap { background: linear-gradient(180deg, rgba(15,27,51,.7), rgba(7,13,26,.9)); border: 1px solid var(--line); position: relative; margin-top: 2rem; }
 .stage-wrap::before, .stage-wrap::after { content: ''; position: absolute; width: 22px; height: 22px; border: 2px solid var(--orange); }
 .stage-wrap::before { top: -2px; left: -2px; border-right: 0; border-bottom: 0; }
 .stage-wrap::after { bottom: -2px; right: -2px; border-left: 0; border-top: 0; }
-#stage { width: 100%; height: auto; display: block; }
 .stage-bar { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding: .7rem 1rem; border-top: 1px solid var(--line); font-family: var(--mono); font-size: .9rem; color: var(--muted); }
 .stage-bar b { color: var(--orange); font-weight: 400; }
 .stage-bar button {
   background: none; border: 1px solid var(--orange); color: var(--orange); font-family: var(--mono); padding: .15rem .9rem; cursor: pointer; letter-spacing: .1em;
 }
 .stage-bar button:hover { background: var(--orange); color: #111; }
-.tile rect { fill: var(--panel); stroke: var(--orange); stroke-width: 2; }
-.tile text { font-family: var(--display); font-weight: 800; fill: var(--white); text-anchor: middle; dominant-baseline: central; }
-.slot rect { fill: rgba(255,106,0,.05); stroke: var(--line); stroke-width: 2; stroke-dasharray: 7 6; }
-.slot text { font-family: var(--mono); fill: var(--muted); text-anchor: middle; font-size: 14px; }
 
 /* team */
 .page-head { padding: 4rem 0 1rem; text-align: center; }
@@ -237,8 +231,3 @@ iframe.sim { display: block; width: 100%; height: max(640px, calc(100vh - 150px)
 .stage-bar a.open:hover { text-decoration: underline; }
 .page-head-sec { padding-top: 4rem; }
 
-/* human-controlled arm */
-#stage { touch-action: none; cursor: crosshair; user-select: none; -webkit-user-select: none; }
-#stage:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
-.stage-bar .btns { display: flex; gap: .6rem; }
-.slot rect { transition: fill .15s, stroke .15s; }
